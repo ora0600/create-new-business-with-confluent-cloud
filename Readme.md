@@ -59,8 +59,8 @@ kqsl> SELECT ROWKEY,productname, shop, lowestprice_1minutes-(lowestprice_1minute
 ```
 
 ## Prepare Oracle Apex Webshop
-Create an account in apex.oracle.com. It is free of charge.
-Import the Apex app into Oracle Apex.
+Create an account in apex.oracle.com. It is free of charge. See [Apex Setup](https://github.com/ora0600/create-new-business-with-confluent-cloud/tree/master/oracle_apex)
+Import the Apex app into Oracle Apex (Application Builder).
 And create the PL/SQL Function to get the data out of Confluent Cloud Kafka cluster. Please add the correct settings into plsql Function. 
 
 ## Stop the new business MVP
