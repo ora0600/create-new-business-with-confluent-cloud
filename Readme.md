@@ -17,7 +17,7 @@ the shell script `env-vars` has some variables which need to fit to your Conflue
 * Your Confluent Cloud Environment:  XX_CCLOUD_ENVNAME=new-business
 * Your Confluent Cloud Login: XX_CCLOUD_EMAIL=YYYYYYY
 * Your Confluent Cloud Password: XX_CCLOUD_PASSWORD=ZZZZZZZZZ
-* The name for the Confluent Cluster: XX_CCLOUD_CLUSTERNAME=DEMODATAFLOW
+* The name for the Confluent Cluster: XX_CCLOUD_CLUSTERNAME=PRICESCRAPING
 
 ## Start the new business MVP
 Start the demo
