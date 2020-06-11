@@ -7,8 +7,6 @@ This github project shows how to implement such a new business MVP in a couple o
 ![Webshop Sample](img/webshop_sample.png)
 
 This demo expects some preparation work, before you can execute the scripts. If all the preparation is done, then everything starts automatically:
-* Confluent Platform is installed locally
-* The PATH includes confluent/bin
 * confluent cloud cli is installed locally: I tested with v1.8.0
 * iterm2 with "install shell integration enables (see iterm2->Install Shell integration)" is installed
 * A Confluent Cloud Account is created and active
