@@ -1,5 +1,5 @@
 #!/bin/bash
-export XX_CCLOUD_ENV= ID of your ccloud environment
+export XX_CCLOUD_ENVNAME=new-business
 export XX_CCLOUD_EMAIL=You login user for ccloud
 export XX_CCLOUD_PASSWORD=your password for ccloud
-export XX_CCLOUD_CLUSTERNAME=DEMODATAFLOW
+export XX_CCLOUD_CLUSTERNAME=pricechecker-webshop
