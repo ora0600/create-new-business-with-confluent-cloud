@@ -11,6 +11,10 @@ This demo expects some preparation work, before you can execute the scripts. If 
 * iterm2 with "install shell integration enables (see iterm2->Install Shell integration)" is installed
 * A Confluent Cloud Account is created and active
 * An environment in Confluent Cloud have to be created and named in the script `env-vars`
+* the python script expects python3 installed and the following packages
+```bash
+pip3 install requests bs4 confluent_kafka uuid
+```
 
 ## Pre-Configure
 the shell script `env-vars` has some variables which need to fit to your Confluent Cloud environment
