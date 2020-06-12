@@ -76,7 +76,7 @@ sleep 720
 echo "Add acl to topics for ksqldb"
 ccloud ksql app configure-acls $CCLOUD_KSQLDB_ID order competitionprices --cluster $CCLOUD_CLUSTERID1
 echo "Create API Key for REST Access"
-ccloud api-key create --resource $CCLOUD_KSQLDB_ID --description "API KEY for KSQLDB cluster lksqlc-6wyp6" > ksqldbapi
+ccloud api-key create --resource $CCLOUD_KSQLDB_ID --description "API KEY for KSQLDB cluster $CCLOUD_KSQLDB_ID" > ksqldbapi
 export CCLOUD_KSQLDBKEY1=$(sed 's/|//g' ksqldbapi | awk '/API Key/{print $NF}')
 export CCLOUD_KSQLDBSECRET1=$(sed 's/|//g' ksqldbapi | awk '/Secret/{print $NF}')
 echo "#########  Following actions for you ############"
