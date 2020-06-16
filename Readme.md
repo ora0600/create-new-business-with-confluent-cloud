@@ -1,3 +1,6 @@
+## DISCLAIMER
+A variety of laws may apply to unauthorized scraping, including contract, copyright and trespass to chattels laws. (“Trespass to chattels” protects against unauthorized use of someone's personal property, such as computer servers). The fact that so many laws restrict scraping means it is legally dubious. Please be aware that this is only demo case. If you want do something similar, please ask for allowance at website provider.
+
 # Create new business with Confluent Cloud
 The idea is very easy. We want to create a webshop which offers products -1% cheaper than the competition.
 For this we will use web scraping to check prices of our competition and produce them into Confluent Kafka cluser every 30 seconds.
