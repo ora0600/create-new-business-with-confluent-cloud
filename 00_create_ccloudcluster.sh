@@ -109,7 +109,7 @@ CURLREST="curl -X \"POST\" \"$CCLOUD_KSQLDB_REST/query\" \
      -H \"Content-Type: application/vnd.ksql.v1+json; charset=utf-8\" \
      -u '$CCLOUD_KSQLDBKEY1:$CCLOUD_KSQLDBSECRET1' \
      -d $'{
-           \"ksql\": \"SELECT lowestprice_5minutes-(lowestprice_5minutes/100) as ourPrice from competitionprices_table emit changes limit 1;\",
+           \"ksql\": \"SELECT lowestprice_1minutes-(lowestprice_1minutes/100) as ourPrice from competitionprices_table emit changes limit 1;\",
            \"streamsProperties\": {}
         }'|jq"
 printf "${PRETTY_CODE}%s\e[0m\n" "${CURLREST}"
