@@ -1,6 +1,8 @@
 # Special Sale Java Application 
 This is a Spring Boot Java that connects to ksqlDB server and queries the stored price in the ksqlDB KTable 
 
+![Application Screenshot](/specialSaleApp.png)
+
 Java code exectutes this query:
 ```
 curl -X POST \
