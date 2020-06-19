@@ -1,5 +1,15 @@
-# MacBooc Sale Java Application 
-This is a Spring Boot Java that connets to ksqlDB server and queries the stored price in the ksqlDB KTable 
+# Special Sale Java Application 
+This is a Spring Boot Java that connects to ksqlDB server and queries the stored price in the ksqlDB KTable 
+
+Java code exectutes this query:
+```
+curl -X POST \
+    http://localhost:8088/query \
+    -H 'content-type: application/vnd.ksql.v1+json; charset=utf-8' \
+    -d '{"ksql":"SELECT lowestprice_1minutes-(lowestprice_1minutes/100) as ourPrice from competitionprices_table emit changes limit 1;", "streamsProperties": {
+      "ksql.streams.auto.offset.reset": "earliest"
+    }}
+```
 
 ## Requirements
   * Java 8
@@ -12,12 +22,13 @@ Default arguments and their values
   * Tomcat server port --server.port=8080
   * ksqlDB server url --ksql.url=http://localhost:8088
 
-Run the app with the default arguments 
+
+You can run the app with the default arguments.
 ```
 mvn spring-boot:run
 ```
 
-Run the app with your specific arguments (all three options displayed)
+Or you can overwrite the arguments if needed:
 ```
 mvn spring-boot:run -Dspring-boot.run.arguments=--ksql.url=http://localhost:8088
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8080
