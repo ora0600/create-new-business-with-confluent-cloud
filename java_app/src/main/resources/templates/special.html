@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MacBook Air Special Sale</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+<h1>MacBook Air Special Sale</h1>
+
+<p>
+    <img src="mac.png" alt="MacBook" width="500" height="300">
+</p>
+
+<h3> Normal price is <strike>2499 EUR</strike></h3>
+
+<h2 th:text="'Our HOT price today is ' + ${price} + ' EUR'"></h2>
+</body>
+</html>
