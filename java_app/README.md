@@ -24,8 +24,8 @@ Example of application.properties for ksqlDB at Confluent Cloud:
 ```
 server.port=8080
 ksql.url=https://pksqlc-4royp.europe-west1.gcp.confluent.cloud:443
-ksql.user=OBYM2NSAF2AH3T3P
-ksql.password=J4BjPv8Ta8Mbf6KI/kGc9e7CdYL6nWpiN9Qz/CDwwMtrsoAuiaVZvV0K90KfiPQ+
+ksql.user=API_KEY
+ksql.password=API_SECRET
 ```
 
 Example of application.properties for ksqlDB at localhost:
