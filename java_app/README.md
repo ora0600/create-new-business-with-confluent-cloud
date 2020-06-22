@@ -18,7 +18,7 @@ curl -X POST \
   * Maven
 
 ## Set cloud properties
-You can set all properties in /java_app/src/main/resources/application.properties or you can overwrite the properties as runtime parameters.
+You can set all properties in [/java_app/src/main/resources/application.properties](/java_app/src/main/resources/application.properties) or you can overwrite the properties as runtime parameters.
 
 Example of application.properties for ksqlDB at Confluent Cloud:
 ```
