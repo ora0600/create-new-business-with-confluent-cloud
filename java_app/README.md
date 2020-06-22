@@ -17,15 +17,29 @@ curl -X POST \
   * Java 8
   * Maven
 
+## Set cloud properties
+You can set all properties in /java_app/src/main/resources/application.properties or you can overwrite the properties as runtime parameters.
+
+Example of application.properties for ksqlDB at Confluent Cloud:
+```
+server.port=8080
+ksql.url=https://pksqlc-4royp.europe-west1.gcp.confluent.cloud:443
+ksql.user=OBYM2NSAF2AH3T3P
+ksql.password=J4BjPv8Ta8Mbf6KI/kGc9e7CdYL6nWpiN9Qz/CDwwMtrsoAuiaVZvV0K90KfiPQ+
+```
+
+Example of application.properties for ksqlDB at localhost:
+```
+server.port=8080
+ksql.url=http://localhost:8088
+ksql.user=
+ksql.password=
+```
+
 ## Run the application
 You can run it at any environment where java and maven are installed
 
-Default arguments and their values
-  * Tomcat server port --server.port=8080
-  * ksqlDB server url --ksql.url=http://localhost:8088
-
-
-You can run the app with the default arguments.
+If you already configured application.properties. You can run the app with this command:
 ```
 mvn spring-boot:run
 ```
@@ -39,6 +53,8 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8080 --ksql.url=h
 
 ## Access the web app
 If you are running it localy and have not changed the Tomcat port http://localhost:8080/sale.html
+
+WARNING: When connecting to Confluent Cloud the REST response can take up to 10 seconds!
 
 ## Debug
 Console will give you the ksqlDB server response.
