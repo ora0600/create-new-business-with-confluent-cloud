@@ -64,8 +64,12 @@ ksql> CREATE STREAM competitionprices (rowkey STRING KEY, shop VARCHAR, title VA
 ksql> CREATE TABLE competitionprices_table AS SELECT title as productname, shop, min(pricefloat) AS lowestprice_1minutes FROM competitionprices WINDOW TUMBLING (SIZE 1 MINUTES) GROUP BY title,shop EMIT CHANGES;
 kqsl> SELECT ROWKEY,productname, shop, lowestprice_1minutes-(lowestprice_1minutes/100) as ourPrice from competitionprices_table emit changes limit 1;
 ```
+## Microservice Webshop 
+The microservice webshop is configured automatically and executed. See [Java Microservice Setup](https://github.com/ora0600/create-new-business-with-confluent-cloud/tree/master/java_app)
+Run the microservice webshop [Java Microservice Webshop](http://localhost:8080/sale.html)
 
-## Prepare Oracle Apex Webshop
+
+## Prepare Oracle Apex Webshop (optional)
 Create an account in apex.oracle.com. It is free of charge. See [Apex Setup](https://github.com/ora0600/create-new-business-with-confluent-cloud/tree/master/oracle_apex)
 Import the Apex app into Oracle Apex (Application Builder).
 And create the PL/SQL Function to get the data out of Confluent Cloud Kafka cluster. Please add the correct settings into plsql Function. 
