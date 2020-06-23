@@ -9,6 +9,10 @@ CCLOUD_CLUSTERID1=$(awk '/id:/{print $NF}' clusterid1)
 CCLOUD_CLUSTERID1_BOOTSTRAP=$(awk '/endpoint: SASL_SSL:\/\//{print $NF}' clusterid1 | sed 's/SASL_SSL:\/\///g')
 CCLOUD_KEY1=$(awk '/key/{print $NF}' apikey1)
 CCLOUD_KSQLDBKEY1=$(sed 's/|//g' ksqldbapi | awk '/API Key/{print $NF}')
+MICROSERVICE=$(jobs -l | grep mvn | cut -c6-10)
+
+#kill microservice
+kill -9 $MICROSERVICE
 
 # DELETE CCLOUD cluster 
 ccloud login
