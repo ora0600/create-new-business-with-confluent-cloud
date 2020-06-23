@@ -12,7 +12,7 @@ CCLOUD_KSQLDBKEY1=$(sed 's/|//g' ksqldbapi | awk '/API Key/{print $NF}')
 MICROSERVICE=$(jobs -l | grep mvn | cut -c6-10)
 
 #kill microservice
-kill -9 $MICROSERVICE
+kill $MICROSERVICE
 
 # DELETE CCLOUD cluster 
 ccloud login
