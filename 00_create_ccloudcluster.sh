@@ -133,5 +133,9 @@ echo "Run microservice..."
 nohup mvn spring-boot:run &
 MICROSERVICE="run microservice webshop under http://localhost:8080/sale.html"
 printf "${PRETTY_CODE}%s\e[0m\n" "${MICROSERVICE}"
+printf "${PRETTY_CODE}%s\e[0m\n" "Show microservice job: jobs -l"
 # Finish
-echo "Cluster $XX_CCLOUD_CLUSTERNAME created"
+echo "Cluster $XX_CCLOUD_CLUSTERNAME created, Microservice started..."
+echo "Delete Cluster $XX_CCLOUD_CLUSTERNAME with ./02_drop_ccloudcluster.sh"
+echo "Stop Microservice with jobs -l kill -9 PID"
+echo "***************************************************"
