@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###### set environment variables
-# CCloud environment CMWORKSHOPS, have to be created before
+# CCloud environment have to be created before
 source env-vars
 
 pwd > basedir
@@ -137,5 +137,4 @@ printf "${PRETTY_CODE}%s\e[0m\n" "Show microservice job: jobs -l"
 # Finish
 echo "Cluster $XX_CCLOUD_CLUSTERNAME created, Microservice started..."
 echo "Delete Cluster $XX_CCLOUD_CLUSTERNAME with ./02_drop_ccloudcluster.sh"
-echo "Stop Microservice with jobs -l kill -9 PID"
 echo "***************************************************"
