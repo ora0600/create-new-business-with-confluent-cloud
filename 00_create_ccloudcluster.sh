@@ -130,7 +130,7 @@ ksql.password=$CCLOUD_KSQLDBSECRET1" > java_app/src/main/resources/application.p
 # run microservice
 cd java_app
 echo "Run microservice..."
-mvn spring-boot:run
+nohup mvn spring-boot:run &
 MICROSERVICE="run microservice webshop under http://localhost:8080/sale.html"
 printf "${PRETTY_CODE}%s\e[0m\n" "${MICROSERVICE}"
 # Finish
