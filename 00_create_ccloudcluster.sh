@@ -122,5 +122,16 @@ APEX="l_clob := apex_web_service.make_rest_request(
         p_body => l_payload
    );"
 printf "${PRETTY_CODE}%s\e[0m\n" "${APEX}"
+# set properties for microservice
+echo "server.port=8080
+ksql.url=$CCLOUD_KSQLDB_REST
+ksql.user=$CCLOUD_KSQLDBKEY1
+ksql.password=$CCLOUD_KSQLDBSECRET1" > java_app/src/main/resources/application.properties
+# run microservice
+cd java_app
+echo "Run microservice..."
+mvn spring-boot:run
+MICROSERVICE="run microservice webshop under http://localhost:8080/sale.html"
+printf "${PRETTY_CODE}%s\e[0m\n" "${MICROSERVICE}"
 # Finish
 echo "Cluster $XX_CCLOUD_CLUSTERNAME created"
