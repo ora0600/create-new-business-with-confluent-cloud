@@ -11,9 +11,6 @@ CCLOUD_KEY1=$(awk '/key/{print $NF}' apikey1)
 CCLOUD_KSQLDBKEY1=$(sed 's/|//g' ksqldbapi | awk '/API Key/{print $NF}')
 MICROSERVICE=$(jobs -l | grep mvn | cut -c6-10)
 
-#kill microservice
-kill $MICROSERVICE
-
 # DELETE CCLOUD cluster 
 ccloud login
 # use environment 
@@ -40,3 +37,7 @@ rm ksqldbapi
 rm ksqldbid
 # Finish
 echo "Cluster $XX_CCLOUD_CLUSTERNAME dropped"
+#kill microservice
+echo "Please execute"
+echo "Kill -9 $MICROSERVICE"
+echo "To stop the microservice"
