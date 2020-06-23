@@ -3,7 +3,7 @@ This is a Spring Boot Java that connects to ksqlDB server and queries the stored
 
 ![Application Screenshot](/java_app/specialSaleApp.png)
 
-Java code exectutes this query:
+Java code executes this query:
 ```
 curl -X POST \
     http://localhost:8088/query \
